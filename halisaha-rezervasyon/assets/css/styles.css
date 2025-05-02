@@ -1,0 +1,167 @@
+/* VINTAGE HALI SAHA TEMASI */
+:root {
+  --grass: #5a7247;
+  --line: #f8f1e5;
+  --vintage-dark: #2a3439;
+  --vintage-light: #e8d8b8;
+  --vintage-red: #c84c4c;
+  --vintage-blue: #4a6b8a;
+  --old-paper: #f5e7d0;
+}
+
+body {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  background-color: var(--old-paper);
+  background-image: url('https://example.com/vintage-paper-texture.jpg');
+  background-attachment: fixed;
+  color: var(--vintage-dark);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.5px;
+}
+
+/* NAVBAR - Retro Futbol Menü */
+.navbar {
+  background: var(--vintage-dark) !important;
+  border-bottom: 3px solid var(--vintage-red);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--line) !important;
+  text-shadow: 2px 2px 0 var(--vintage-red);
+}
+
+.nav-link {
+  color: var(--vintage-light) !important;
+  font-size: 1.1rem;
+  position: relative;
+  transition: all 0.3s;
+  margin: 0 5px;
+}
+
+.nav-link:hover {
+  color: var(--line) !important;
+}
+
+.nav-link.active {
+  color: var(--line) !important;
+  font-weight: bold;
+  border-bottom: 2px solid var(--vintage-red);
+}
+
+/* KARTLAR - Eski Futbol Kartları */
+.card {
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  background: var(--old-paper);
+  border: 1px solid var(--vintage-dark);
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 20px rgba(0,0,0,0.4);
+}
+
+.card-header {
+  background-color: var(--vintage-red);
+  color: var(--line);
+  font-weight: bold;
+  border-bottom: 2px solid var(--vintage-dark);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  filter: sepia(0.3) contrast(1.1);
+  border-bottom: 3px solid var(--vintage-red);
+}
+
+/* BUTONLAR - Retro Butonlar */
+.btn {
+  border-radius: 0;
+  padding: 8px 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  border: 2px solid var(--vintage-dark);
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--vintage-red);
+  color: var(--line);
+}
+
+.btn-primary:hover {
+  background: var(--vintage-dark);
+  border-color: var(--vintage-red);
+  transform: translateY(-2px);
+}
+
+/* FORM ELEMANLARI */
+.form-control, .form-select {
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid var(--vintage-dark);
+  color: var(--vintage-dark);
+  border-radius: 0;
+  padding: 10px 15px;
+  font-family: 'Courier New', monospace;
+}
+
+.form-control:focus, .form-select:focus {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 0.25rem rgba(200, 76, 76, 0.25);
+  border-color: var(--vintage-red);
+}
+
+/* HALI SAHA ZEMİNİ EFEKTİ */
+.pitch-bg {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--grass),
+    var(--grass) 10px,
+    #4e663e 10px,
+    #4e663e 20px
+  );
+  padding: 20px;
+  border: 3px solid var(--line);
+  position: relative;
+}
+
+.pitch-bg::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px dashed var(--line);
+  pointer-events: none;
+}
+
+/* FOOTER */
+footer {
+  background: var(--vintage-dark);
+  color: var(--vintage-light);
+  padding: 20px 0;
+  border-top: 3px solid var(--vintage-red);
+  font-family: 'Courier New', monospace;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    margin-bottom: 15px;
+  }
+} 
